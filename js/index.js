@@ -148,3 +148,8 @@ const footer = document.querySelector('footer p');
 const copyright = siteContent.footer.copyright;
 
 footer.textContent = copyright;
+
+
+const biggerFonts = document.querySelectorAll('h4');
+
+biggerFonts.forEach(item => {item.style.fontSize = '3rem'});
