@@ -47,7 +47,6 @@ headerImage.setAttribute('src', siteContent.cta['img-src']);
 const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-
 const btn = document.querySelector('button');
 const btn2 = siteContent.cta.button;
 btn.textContent = btn2;
@@ -77,80 +76,100 @@ const nav6 = siteContent.nav['nav-item-6'];
 navs[5].textContent = nav6;
 
 
-const topContentPara1 = document.querySelector('.top-content .text-content:nth-child(odd)');
-const featuresContent = siteContent['main-content']['features-content'];
+const topContentFeaturesHeading = document.querySelector('.top-content .text-content:nth-child(odd) h4');
 
-topContentPara1.textContent = featuresContent;
+const featuresContent = siteContent['main-content']['features-h4'];
 
-
-const topContentPara2 = document.querySelector('.top-content .text-content:nth-child(even)');
-const aboutContent = siteContent['main-content']['about-content'];
-
-topContentPara2.textContent = aboutContent;
+topContentFeaturesHeading.textContent = featuresContent;
 
 
-const bottomContent = document.querySelectorAll('.bottom-content .text-content');
-const services = siteContent['main-content']['services-h4'];
+const topContentFeaturesAbout = document.querySelector('.top-content .text-content:nth-child(even) h4');
+const aboutContent = siteContent['main-content']['about-h4'];
 
-bottomContent[0].textContent = services;
-
-const product = siteContent['main-content']['product-h4'];
-bottomContent[1].textContent = product;
-
-const vision = siteContent['main-content']['vision-h4'];
-bottomContent[2].textContent = vision;
+topContentFeaturesAbout.textContent = aboutContent;
 
 
-const bottomContentPara1 = document.querySelector('.bottom-content .text-content:nth-child(odd)');
-const servicesContent = siteContent['main-content']['services-content'];
+const bottomContentServicesVision = document.querySelector('.bottom-content .text-content:nth-child(odd) h4');
+const servicesContent = siteContent['main-content']['services-h4'];
 
-bottomContentPara1.textContent = servicesContent;
-
-const bottomContentPara2 = document.querySelector('.bottom-content .text-content:nth-child(even)');
-const productContent = siteContent['main-content']['product-content'];
-
-bottomContentPara2.textContent = productContent;
-
-const bottomContentPara3 = document.getElementsByClassName('text-content');
-
-const visionContent = siteContent['main-content']['vision-content'];
-
-bottomContentPara3[4].textContent = visionContent;
+bottomContentServicesVision.textContent = servicesContent;
 
 
-const contact = document.querySelectorAll('.contact h4,p');
+const bottomContentProduct = document.querySelector('.bottom-content .text-content:nth-child(even) h4');
+const productContent = siteContent['main-content']['product-h4'];
 
-const contactHeading = siteContent.contact['contact-h4'];
+bottomContentProduct.textContent = productContent;
 
-contact[0].textContent = contactHeading;
 
-contactAdress = siteContent.contact.address;
+const bottomContentVision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+const visionContent = siteContent['main-content']['vision-h4'];
 
-contact[1].textContent = contactAdress;
+bottomContentVision.textContent = visionContent;
 
-contactPhone = siteContent.contact.phone;
-contact[2].textContent = contactPhone;
 
-contactEmail = siteContent.contact.email;
-contact[3].textContent = contactEmail;
+const topContentFeaturesParagraph = document.querySelector('.top-content .text-content:nth-child(odd) p');
+const featuresParagraph = siteContent['main-content']['features-content'];
 
+topContentFeaturesParagraph.textContent = featuresParagraph;
+
+
+const topContentAboutParagraph = document.querySelector('.top-content .text-content:nth-child(even) p');
+const aboutParagraph = siteContent['main-content']['about-content'];
+
+topContentAboutParagraph.textContent = aboutParagraph;
+
+
+const bottomContentServicesParagraph = document.querySelector('.bottom-content .text-content:nth-child(odd) p');
+const servicesParagraph = siteContent['main-content']['services-content'];
+
+bottomContentServicesParagraph.textContent = servicesParagraph;
+
+
+const bottomContentProductParagraph = document.querySelector('.bottom-content .text-content:nth-child(even) p');
+const productParagraph = siteContent['main-content']['product-content'];
+
+bottomContentProductParagraph.textContent = productParagraph;
+
+const bottomContentVisionParagraph = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+const visionParagraph = siteContent['main-content']['vision-content'];
+
+bottomContentVisionParagraph.textContent = visionParagraph;
+
+const contact1 = document.querySelector('.contact h4');
+const headingContact1 = siteContent.contact['contact-h4'];
+
+contact1.textContent = headingContact1;
+
+const contact2 = document.querySelectorAll('.contact p');
+
+const contactAddress = siteContent.contact.address;
+contact2[0].textContent = contactAddress;
+
+const contactPhone = siteContent.contact.phone;
+contact2[1].textContent = contactPhone;
+
+const contactEmail = siteContent.contact.email;
+contact2[2].textContent = contactEmail;
 
 const footer = document.querySelector('footer p');
-const {copyright} = siteContent.footer;
+const {
+copyright,
+} = siteContent.footer;
 
 footer.textContent = copyright;
 
+navs.forEach(item => item.style.color = 'green');
 
-// only affecting heading in footer but not on the rest of them
+const randomElement1 = document.createElement('a');
+randomElement1.textContent = 'Hey there, whats up?';
 
-const biggerFonts = document.querySelectorAll(' h4');
+const destination = document.querySelector('nav');
 
-biggerFonts.forEach((item) => {
-  item.style.fontSize = '3rem';
-});
+destination.prepend(randomElement1);
 
+const randomElement2 = document.createElement('a');
+randomElement2.textContent = 'Nothing much';
 
-// not working
+const destination2 = document.querySelector('nav');
 
-const tryAgain = document.getElementsByTagName('h4');
-tryAgain[0].style.fontSize = '20px';
+destination2.append(randomElement2);
