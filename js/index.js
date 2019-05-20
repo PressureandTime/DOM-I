@@ -9,8 +9,8 @@ const siteContent = {
     'img-src': 'img/logo.png',
   },
   cta: {
-    'h1': 'DOM Is Awesome',
-    'button': 'Get Started',
+    h1: 'DOM Is Awesome',
+    button: 'Get Started',
     'img-src': 'img/header-img.png',
   },
   'main-content': {
@@ -28,12 +28,12 @@ const siteContent = {
   },
   contact: {
     'contact-h4': 'Contact',
-    'address': '123 Way 456 Street Somewhere, USA',
+    address: '123 Way 456 Street Somewhere, USA',
     phone: '1 (888) 888-8888',
-    'email': 'sales@greatidea.io',
+    email: 'sales@greatidea.io',
   },
-  'footer': {
-    'copyright': 'Copyright Great Idea! 2018',
+  footer: {
+    copyright: 'Copyright Great Idea! 2018',
   },
 };
 
@@ -57,21 +57,51 @@ const heading2 = siteContent.cta.h1;
 heading.textContent = heading2;
 
 const navs = document.querySelectorAll('a');
-const nav1 = siteContent.nav["nav-item-1"];
+const nav1 = siteContent.nav['nav-item-1'];
 
 navs[0].textContent = nav1;
 
-const nav2 = siteContent.nav["nav-item-2"];
+const nav2 = siteContent.nav['nav-item-2'];
 navs[1].textContent = nav2;
 
-const nav3 = siteContent.nav["nav-item-3"];
+const nav3 = siteContent.nav['nav-item-3'];
 navs[2].textContent = nav3;
 
-const nav4 = siteContent.nav["nav-item-4"];
+const nav4 = siteContent.nav['nav-item-4'];
 navs[3].textContent = nav4;
 
 const nav5 = siteContent.nav['nav-item-5'];
 navs[4].textContent = nav5;
 
-const nav6 = siteContent.nav["nav-item-6"];
+const nav6 = siteContent.nav['nav-item-6'];
 navs[5].textContent = nav6;
+
+
+const topContent = document.querySelectorAll('.main-content .text-content');
+const features = siteContent["main-content"]["features-h4"];
+
+topContent[0].textContent = features;
+
+const about = siteContent["main-content"]["about-h4"];
+
+topContent[1].textContent = about;
+
+const topContentPara1 = document.querySelector('.top-content .text-content:nth-child(odd)');
+const featuresContent = siteContent["main-content"]["features-content"];
+
+topContentPara1.textContent = featuresContent;
+
+
+const topContentPara2 = document.querySelector('.top-content .text-content:nth-child(even)');
+const aboutContent = siteContent["main-content"]["about-content"];
+
+topContentPara2.textContent = aboutContent;
+
+
+const bottomContent = document.querySelectorAll('.bottom-content .text-content');
+const services = siteContent['main-content']["services-h4"];
+
+bottomContent[0].textContent = services;
+
+const product = siteContent["main-content"]['product-h4'];
+bottomContent[1].textContent = product;
