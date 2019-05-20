@@ -77,15 +77,6 @@ const nav6 = siteContent.nav['nav-item-6'];
 navs[5].textContent = nav6;
 
 
-const topContent = document.querySelectorAll('.main-content .text-content');
-const features = siteContent['main-content']['features-h4'];
-
-topContent[0].textContent = features;
-
-const about = siteContent['main-content']['about-h4'];
-
-topContent[1].textContent = about;
-
 const topContentPara1 = document.querySelector('.top-content .text-content:nth-child(odd)');
 const featuresContent = siteContent['main-content']['features-content'];
 
@@ -145,11 +136,21 @@ contact[3].textContent = contactEmail;
 
 
 const footer = document.querySelector('footer p');
-const copyright = siteContent.footer.copyright;
+const {copyright} = siteContent.footer;
 
 footer.textContent = copyright;
 
 
-const biggerFonts = document.querySelectorAll('h4');
+// only affecting heading in footer but not on the rest of them
 
-biggerFonts.forEach(item => {item.style.fontSize = '3rem'});
+const biggerFonts = document.querySelectorAll(' h4');
+
+biggerFonts.forEach((item) => {
+  item.style.fontSize = '3rem';
+});
+
+
+// not working
+
+const tryAgain = document.getElementsByTagName('h4');
+tryAgain[0].style.fontSize = '20px';
