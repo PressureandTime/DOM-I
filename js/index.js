@@ -78,30 +78,73 @@ navs[5].textContent = nav6;
 
 
 const topContent = document.querySelectorAll('.main-content .text-content');
-const features = siteContent["main-content"]["features-h4"];
+const features = siteContent['main-content']['features-h4'];
 
 topContent[0].textContent = features;
 
-const about = siteContent["main-content"]["about-h4"];
+const about = siteContent['main-content']['about-h4'];
 
 topContent[1].textContent = about;
 
 const topContentPara1 = document.querySelector('.top-content .text-content:nth-child(odd)');
-const featuresContent = siteContent["main-content"]["features-content"];
+const featuresContent = siteContent['main-content']['features-content'];
 
 topContentPara1.textContent = featuresContent;
 
 
 const topContentPara2 = document.querySelector('.top-content .text-content:nth-child(even)');
-const aboutContent = siteContent["main-content"]["about-content"];
+const aboutContent = siteContent['main-content']['about-content'];
 
 topContentPara2.textContent = aboutContent;
 
 
 const bottomContent = document.querySelectorAll('.bottom-content .text-content');
-const services = siteContent['main-content']["services-h4"];
+const services = siteContent['main-content']['services-h4'];
 
 bottomContent[0].textContent = services;
 
-const product = siteContent["main-content"]['product-h4'];
+const product = siteContent['main-content']['product-h4'];
 bottomContent[1].textContent = product;
+
+const vision = siteContent['main-content']['vision-h4'];
+bottomContent[2].textContent = vision;
+
+
+const bottomContentPara1 = document.querySelector('.bottom-content .text-content:nth-child(odd)');
+const servicesContent = siteContent['main-content']['services-content'];
+
+bottomContentPara1.textContent = servicesContent;
+
+const bottomContentPara2 = document.querySelector('.bottom-content .text-content:nth-child(even)');
+const productContent = siteContent['main-content']['product-content'];
+
+bottomContentPara2.textContent = productContent;
+
+const bottomContentPara3 = document.getElementsByClassName('text-content');
+
+const visionContent = siteContent['main-content']['vision-content'];
+
+bottomContentPara3[4].textContent = visionContent;
+
+
+const contact = document.querySelectorAll('.contact h4,p');
+
+const contactHeading = siteContent.contact['contact-h4'];
+
+contact[0].textContent = contactHeading;
+
+contactAdress = siteContent.contact.address;
+
+contact[1].textContent = contactAdress;
+
+contactPhone = siteContent.contact.phone;
+contact[2].textContent = contactPhone;
+
+contactEmail = siteContent.contact.email;
+contact[3].textContent = contactEmail;
+
+
+const footer = document.querySelector('footer p');
+const copyright = siteContent.footer.copyright;
+
+footer.textContent = copyright;
